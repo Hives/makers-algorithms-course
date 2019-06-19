@@ -7,6 +7,5 @@ def most_frequent(input)
       item_count[item] = 1
     end
   end
-  item_count.keys.sort { |a, b| item_count[b] <=> item_count[a] }.first
+  item_count.keys.sort { |a, b| item_count[b] <=> item_count[a] } [0, 2]
 end
-
