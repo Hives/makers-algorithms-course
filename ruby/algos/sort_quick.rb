@@ -13,16 +13,15 @@ def quick_sort(input, low, high)
 end
 
 def partition(input, low, high)
-  i_pivot = high
-  pivot = input[i_pivot]
+  pivot = input[high]
   i = low
-  (low .. i_pivot - 1).each do |j|
+  (low .. high - 1).each do |j|
     if input[j] < pivot
       swap(input, i, j)
       i += 1
     end
   end
-  swap(input, i, i_pivot)
+  swap(input, i, high)
   i
 end
 
